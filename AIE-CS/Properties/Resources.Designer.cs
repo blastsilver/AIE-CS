@@ -59,25 +59,5 @@ namespace AIE_CS.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap ic_clear {
-            get {
-                object obj = ResourceManager.GetObject("ic_clear", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] RobotoRegular {
-            get {
-                object obj = ResourceManager.GetObject("RobotoRegular", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace AIE_CS
+﻿namespace AIECS
 {
     partial class Form1
     {
@@ -29,94 +29,116 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.form1_Timer = new System.Windows.Forms.Timer(this.components);
-            this.form1_SaveFile = new System.Windows.Forms.SaveFileDialog();
-            this.form1_OpenFile = new System.Windows.Forms.OpenFileDialog();
-            this.form1_AppClose = new System.Windows.Forms.PictureBox();
-            this.form1_AppTitleName = new System.Windows.Forms.Label();
-            this.form1_AppTitleBar = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.form1_AppClose)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.form1_AppTitleBar)).BeginInit();
+            this.menu = new System.Windows.Forms.MenuStrip();
+            this.FileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.menu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // form1_OpenFile
+            // menu
             // 
-            this.form1_OpenFile.FileName = "form1_OpenFile";
+            this.menu.BackColor = System.Drawing.Color.Goldenrod;
+            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.FileToolStripMenuItem,
+            this.clearToolStripMenuItem});
+            this.menu.Location = new System.Drawing.Point(0, 0);
+            this.menu.Name = "menu";
+            this.menu.Size = new System.Drawing.Size(646, 24);
+            this.menu.TabIndex = 4;
+            this.menu.Text = "menuStrip1";
             // 
-            // form1_AppClose
+            // FileToolStripMenuItem
             // 
-            this.form1_AppClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.form1_AppClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.form1_AppClose.BackgroundImage = global::AIE_CS.Properties.Resources.ic_clear;
-            this.form1_AppClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.form1_AppClose.Location = new System.Drawing.Point(649, 12);
-            this.form1_AppClose.Name = "form1_AppClose";
-            this.form1_AppClose.Size = new System.Drawing.Size(32, 24);
-            this.form1_AppClose.TabIndex = 0;
-            this.form1_AppClose.TabStop = false;
-            this.form1_AppClose.MouseEnter += new System.EventHandler(this.form1_AppClose_MouseEnter);
-            this.form1_AppClose.MouseLeave += new System.EventHandler(this.form1_AppClose_MouseLeave);
-            this.form1_AppClose.MouseUp += new System.Windows.Forms.MouseEventHandler(this.form1_AppClose_MouseUp);
+            this.FileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.openToolStripMenuItem,
+            this.saveAsToolStripMenuItem});
+            this.FileToolStripMenuItem.Name = "FileToolStripMenuItem";
+            this.FileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.FileToolStripMenuItem.Text = "File";
             // 
-            // form1_AppTitleName
+            // openToolStripMenuItem
             // 
-            this.form1_AppTitleName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.openToolStripMenuItem.Text = "Open";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            // 
+            // saveAsToolStripMenuItem
+            // 
+            this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveAsToolStripMenuItem.Text = "Save As";
+            this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
+            // 
+            // clearToolStripMenuItem
+            // 
+            this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
+            this.clearToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.clearToolStripMenuItem.Text = "Clear";
+            this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.form1_AppTitleName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.form1_AppTitleName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.form1_AppTitleName.ForeColor = System.Drawing.Color.White;
-            this.form1_AppTitleName.Location = new System.Drawing.Point(12, 12);
-            this.form1_AppTitleName.Name = "form1_AppTitleName";
-            this.form1_AppTitleName.Size = new System.Drawing.Size(631, 24);
-            this.form1_AppTitleName.TabIndex = 1;
-            this.form1_AppTitleName.Text = "Form 1";
-            this.form1_AppTitleName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.form1_AppTitleName.MouseDown += new System.Windows.Forms.MouseEventHandler(this.form1_AppTitleName_MouseDown);
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 41);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(622, 571);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
             // 
-            // form1_AppTitleBar
+            // timer1
             // 
-            this.form1_AppTitleBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.form1_AppTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.form1_AppTitleBar.Location = new System.Drawing.Point(0, 0);
-            this.form1_AppTitleBar.Name = "form1_AppTitleBar";
-            this.form1_AppTitleBar.Size = new System.Drawing.Size(693, 48);
-            this.form1_AppTitleBar.TabIndex = 2;
-            this.form1_AppTitleBar.TabStop = false;
-            this.form1_AppTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.form1_AppTitleBar_MouseDown);
+            this.timer1.Interval = 16;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Form1
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(693, 500);
-            this.Controls.Add(this.form1_AppTitleName);
-            this.Controls.Add(this.form1_AppClose);
-            this.Controls.Add(this.form1_AppTitleBar);
-            this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Moccasin;
+            this.ClientSize = new System.Drawing.Size(646, 624);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.menu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "OBJ-Tool-Kit";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
-            ((System.ComponentModel.ISupportInitialize)(this.form1_AppClose)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.form1_AppTitleBar)).EndInit();
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
+            this.menu.ResumeLayout(false);
+            this.menu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Timer form1_Timer;
-        private System.Windows.Forms.SaveFileDialog form1_SaveFile;
-        private System.Windows.Forms.OpenFileDialog form1_OpenFile;
-        private System.Windows.Forms.PictureBox form1_AppClose;
-        private System.Windows.Forms.Label form1_AppTitleName;
-        private System.Windows.Forms.PictureBox form1_AppTitleBar;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.MenuStrip menu;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.ToolStripMenuItem FileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem clearToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
 
