@@ -19,10 +19,10 @@ namespace AIECS
         Vector3 m_viewRot;
         Matrix4 m_viewRotM4;
         List<OBJMesh> m_meshes = new List<OBJMesh>();
-        const float m_viewSpeed_MIN = 0.01f;
-        const float m_viewSpeed_MAX = 0.02f;
-        const float m_viewAngle_MIN = (float)(2.0 * Math.PI) * 0.01f;
-        const float m_viewAngle_MAX = (float)(2.0 * Math.PI) * 0.02f;
+        const float m_viewSpeed_MIN = 0.002f;
+        const float m_viewSpeed_MAX = 0.020f;
+        const float m_viewAngle_MIN = (float)(2.0 * Math.PI) * 0.002f;
+        const float m_viewAngle_MAX = (float)(2.0 * Math.PI) * 0.020f;
 
         public Form1() { InitializeComponent(); }
 
