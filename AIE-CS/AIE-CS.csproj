@@ -99,8 +99,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="scene.obj" />
-    <None Include="tree.obj" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
